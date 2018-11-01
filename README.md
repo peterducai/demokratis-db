@@ -28,3 +28,9 @@ sudo -u postgres psql
 
 \q
 ```
+
+
+
+> sudo systemctl enable postgresql
+
+> sudo systemctl restart postgresql
