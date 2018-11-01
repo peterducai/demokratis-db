@@ -1,4 +1,9 @@
-FROM posgtres:latest
+FROM postgres
 
-COPY demokratis_db_docker.sql /app
+ENV POSTGRES_USER docker
+ENV POSTGRES_PASSWORD post123
+ENV POSTGRES_DB aidb
+
+COPY demokratis_db_docker.sql /docker-entrypoint-initdb.d/demokratis_db_docker.sql
+ #will be executed automatically
 
