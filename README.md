@@ -39,6 +39,10 @@ sudo -u postgres psql
 
 > sudo docker build . -t "demokratis-db:0.1"
 
+or 
+
+> sudo docker build . -t "demokratis-db:0.1" -f Dockerfile_fakedata
+
 > sudo docker run --name demokratisdb -p 5432:5432 -it demokratis-db:0.1
 
 OR if you're already running postgres on port 5432, then
