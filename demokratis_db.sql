@@ -1,3 +1,7 @@
+--- CREATE USER docker;
+--- CREATE DATABASE demokratis;
+--- GRANT ALL PRIVILEGES ON DATABASE demokratis TO docker;
+
 CREATE SCHEMA demokratis;
 
 -- SELECT create_hypertable('new_table', 'time');
