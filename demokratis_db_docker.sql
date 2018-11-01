@@ -1,4 +1,4 @@
-CREATE USER docker;
+--- CREATE USER docker;
 CREATE DATABASE demokratis;
 GRANT ALL PRIVILEGES ON DATABASE demokratis TO docker;
 
