@@ -65,4 +65,13 @@ CREATE TABLE demokratis.tags (
 --- select row_to_json(words) from words;
 
 INSERT INTO demokratis.users (time, usertoken, country, city) VALUES (NOW(),'aesr0fdjd0vsafluroid','Czechia', 'Prague');
-INSERT INTO demokratis.questions (time, title, creator, description, starting_date, expire_in_days) VALUES (NOW(), 'my question 1', (SELECT id FROM demokratis.users WHERE demokratis.users.usertoken = 'aesr0fdjd0vsafluroid'), 'just a question',NOW(),1);
+INSERT INTO demokratis.questions (time, title, creator, description, starting_date, expire_in_days) VALUES (NOW(),
+    'my question 1', (SELECT id FROM demokratis.users WHERE demokratis.users.usertoken = 'aesr0fdjd0vsafluroid'),
+    'just a question',
+    NOW(),
+    1);
+INSERT INTO demokratis.votes (time, question, userid, voted) VALUES (NOW(), 
+    (SELECT id FROM demokratis.questions WHERE demokratis.questions.title = 'my question 1'),
+    (SELECT id FROM demokratis.users WHERE demokratis.users.usertoken = 'aesr0fdjd0vsafluroid'),
+    'Yes');
+    --- TODO: trigger for counter
