@@ -48,3 +48,7 @@ sudo -u postgres psql
 > sudo -u postgres psql -h localhost -p 9999 -U docker demokratis
  
 > password: post123
+
+> \l
+
+> \q
