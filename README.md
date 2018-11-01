@@ -30,7 +30,21 @@ sudo -u postgres psql
 ```
 
 
-
 > sudo systemctl enable postgresql
 
 > sudo systemctl restart postgresql
+
+## Docker
+
+
+> sudo docker build . -t "demokratis-db:0.1"
+
+> sudo docker run --name demokratisdb -p 9999:5432 -it demokratis-db:0.1
+
+
+
+## Connect 
+
+> sudo -u postgres psql -h localhost -p 9999 -U docker demokratis
+ 
+> password: post123
